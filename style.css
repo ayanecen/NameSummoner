@@ -1,0 +1,275 @@
+ /* 全体のスタイル */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #c7ceea);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #ff6b6b;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* フォームのスタイル */
+.form-container {
+    margin: 2rem 0;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2d3436;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem;
+    border: 2px solid #ffb8b8;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+input[type="text"]:focus {
+    border-color: #ff6b6b;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+}
+
+button, .btn {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+button:hover, .btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+/* 注意書きのスタイル */
+.disclaimer {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    border: 2px dashed #ffb8b8;
+}
+
+.disclaimer p {
+    color: #ff6b6b;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.disclaimer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.disclaimer li {
+    margin: 0.8rem 0;
+    padding: 0.8rem;
+    background: rgba(255, 184, 184, 0.1);
+    border-radius: 10px;
+    color: #2d3436;
+    font-size: 0.95rem;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.disclaimer li:hover {
+    transform: translateX(5px);
+    background: rgba(255, 184, 184, 0.2);
+}
+
+.disclaimer li::before {
+    content: "✨";
+    margin-right: 0.5rem;
+    color: #ff6b6b;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .disclaimer li {
+        font-size: 0.9rem;
+    }
+}
+
+.ad-container {
+    margin: 2rem auto;
+    max-width: 728px;
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    border: 2px dashed #ffb8b8;
+}
+
+.sponsored-header {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.sponsored-header p {
+    font-size: 1.1rem;
+    color: white;
+    text-align: center;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+/* 結果ページのスタイル */
+.result-container {
+    max-width: 800px;
+}
+
+.original-name {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    border: 2px dashed #ffb8b8;
+}
+
+.original-name p {
+    color: #2d3436;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.generated-names {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.name-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 1.5rem;
+    border: 2px solid #ffb8b8;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.name-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.2);
+}
+
+.name-number {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.generated-name {
+    color: #2d3436;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding-top: 1rem;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.share-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.share-btn.twitter {
+    background: #1DA1F2;
+}
+
+.share-btn.facebook {
+    background: #1877F2;
+}
+
+.share-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.back-button {
+    margin: 2rem 0;
+    text-align: center;
+}
